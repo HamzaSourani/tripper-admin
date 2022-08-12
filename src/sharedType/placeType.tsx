@@ -1,0 +1,31 @@
+type placeType = {
+  id: string;
+  name: string;
+  icon: null;
+  created_at: string;
+  updated_at: string;
+  deleted_at: null;
+  media: {
+    id: number;
+    model_type: "place type";
+    model_id: string;
+    uuid: string;
+    collection_name: string;
+    name: string;
+    file_name: string;
+    mime_type: string;
+    disk: "public";
+    conversions_disk: "public";
+    size: number;
+    manipulations: [];
+    custom_properties: [];
+    generated_conversions: [];
+    responsive_images: [];
+    order_column: number;
+    created_at: string;
+    updated_at: string;
+    original_url: string;
+    preview_url: string;
+  }[];
+};
+export default placeType;
