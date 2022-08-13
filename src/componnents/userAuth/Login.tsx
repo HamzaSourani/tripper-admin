@@ -10,9 +10,9 @@ import Brand from "../../sharedComponents/Brand";
 import LoadingButton from "../../sharedComponents/LoadingButton";
 import useUserLogin from "../../customHooks/useUserLogin";
 type loginProps = {
-  chechIsUserAuth: () => void;
+  checkIsUserAuth: () => void;
 };
-const Login = ({ chechIsUserAuth }: loginProps) => {
+const Login = ({ checkIsUserAuth }: loginProps) => {
   const [password, setPassword] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
@@ -35,7 +35,7 @@ const Login = ({ chechIsUserAuth }: loginProps) => {
       setEmail("");
       setPassword("");
       navigate("/create-place");
-      chechIsUserAuth();
+      checkIsUserAuth();
     } else if (authStatus === "failed") {
       //   dispatch(
       //     setSnackbarParam({
@@ -44,7 +44,7 @@ const Login = ({ chechIsUserAuth }: loginProps) => {
       //     })
       //   );
     }
-  }, [authStatus, navigate]);
+  }, [authStatus, navigate, checkIsUserAuth]);
 
   return (
     <Grid

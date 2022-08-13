@@ -19,7 +19,7 @@ const AppBarComponent = ({ isUserAuth }: appBarProps) => {
         sx={{
           backgroundColor: "#fff",
           direction: "ltr",
-          boxShadow: "0px 0px 4px  #ffd500",
+          boxShadow: 2,
           zIndex: (theme) => theme.zIndex.drawer + 1,
         }}
         position="fixed"

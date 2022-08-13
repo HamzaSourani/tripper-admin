@@ -21,9 +21,10 @@ const MainComponent = () => {
 
           [`& .MuiDrawer-paper`]: {
             pt: 4,
-            backgroundColor: "#2a2e43",
+            backgroundColor: "var(--primary-color)",
             width: 200,
             boxSizing: "border-box",
+            boxShadow: 3,
           },
         }}
         variant="permanent"
@@ -35,16 +36,16 @@ const MainComponent = () => {
             <ListItem onClick={() => navigate("/create-place")} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LocationOnIcon color="primary" />
+                  <LocationOnIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText sx={{ color: "white" }} primary={"إنشاء مكان"} />
               </ListItemButton>
             </ListItem>
-            <Divider sx={{ backgroundColor: " #ffd500", my: 1 }} />
+            <Divider sx={{ my: 1 }} />
             <ListItem onClick={() => navigate("/add-products")} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <AddCardIcon color="primary" />
+                  <AddCardIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText
                   sx={{ color: "white" }}

@@ -18,7 +18,7 @@ const Login = lazy(() => import("./componnents/userAuth/Login"));
 function App() {
   // const [state, dispatch] = React.useReducer(reducer, initialState as boolean);
   const [isUserAuth, setisUserAuth] = React.useState<boolean>(false);
-  const chechIsUserAuth = () => {
+  const checkIsUserAuth = () => {
     if (localStorage.getItem("bearerToken") !== null) {
       if (JSON.parse(localStorage.getItem("userInfo")!).user_scope)
         setisUserAuth(true);
@@ -26,7 +26,7 @@ function App() {
     } else setisUserAuth(false);
   };
   React.useEffect(() => {
-    chechIsUserAuth();
+    checkIsUserAuth();
   }, []);
 
   return (
@@ -45,7 +45,7 @@ function App() {
           </Route>
           <Route
             path="/login"
-            element={<Login chechIsUserAuth={chechIsUserAuth} />}
+            element={<Login checkIsUserAuth={checkIsUserAuth} />}
           />
         </Routes>
       </Suspense>
